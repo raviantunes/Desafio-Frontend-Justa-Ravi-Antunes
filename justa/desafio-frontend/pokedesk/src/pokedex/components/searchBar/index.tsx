@@ -1,8 +1,7 @@
 import { styled, alpha } from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import InputBase from "@mui/material/InputBase";
-import SearchIcon from "@mui/icons-material/Search";
 
+// declarando os componentes estilizados do Material UI
 export const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -44,22 +43,3 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
-
-
-//modelo de Search Bar para se usar
-const SearchAppBar = (input: string) => {
-  return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Search>
-        <SearchIconWrapper>
-          <SearchIcon />
-        </SearchIconWrapper>
-        <StyledInputBase
-          placeholder="Search…"
-          inputProps={{ "aria-label": "search" }}
-        //   onChange={}
-        />
-      </Search>
-    </Box>
-  );
-};

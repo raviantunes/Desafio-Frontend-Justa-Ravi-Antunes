@@ -10,7 +10,8 @@ import { PokemonDetailsInterface } from "../../../pokemons/interfaces/PokemonDet
 import { Search, SearchIconWrapper, StyledInputBase } from "../../components/searchBar";
 import SearchIcon from "@mui/icons-material/Search";
 
-
+/* criando a renderização da página inicial (Pokedex) com o
+filtro de busca e a utilização do contexto de pokemons favoritos*/
 const Pokedex: React.FC = () => {
   const { favorites } = useContext(FavoritesContext);
   const [pokemons, setPokemons] = useState<PokemonDetailsInterface[]>([]);
@@ -26,14 +27,6 @@ const Pokedex: React.FC = () => {
   }, []);
 
   const favoritesCount = favorites.length;
-
-  const pokéSearch = (input: string) => {
-    setPokemons(pokemons.filter((pokemon) => 
-      pokemon.name.toLowerCase().includes(input.toLowerCase())
-        ||
-        pokemon.types.some((t) => t.type.name.includes(input.toLowerCase())))
-    );};
-
   
   return (
     <div>

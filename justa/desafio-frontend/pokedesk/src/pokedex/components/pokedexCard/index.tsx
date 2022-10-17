@@ -1,15 +1,16 @@
 import { Favorite } from "@mui/icons-material";
-import { Card, CardMedia, CardHeader, CardActions, CardActionArea, IconButton, Chip } from "@mui/material";
+import { Card, CardMedia, CardHeader, CardActions, IconButton, Chip } from "@mui/material";
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import { FavoritesContext } from "../../contexts/FavoritesContext";
 import { PokemonDetailsInterface } from "../../../pokemons/interfaces/PokemonDetailsInterface"; 
 import { PokemonDetailsModal } from "../pokemonDetailsModal";
 
+// tipando a prop recebida por cada card renderizado na página inicial (Pokedex)
 interface PokedexCardProps {
   pokemon: PokemonDetailsInterface;
 }
 
+// criando o card de cada pokemon utilizando o contexto de favoritos
 const PokedexCard: React.FC<PokedexCardProps> = ({ pokemon }) => {
   const { setFavorites, favorites } = useContext(FavoritesContext);
 

@@ -6,8 +6,9 @@ import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { PokemonDetailsInterface } from "../../../pokemons/interfaces/PokemonDetailsInterface";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
+// estilo utilizado na div (Box) que engloba os componentes do modal
 const style = {
   position: "absolute",
   top: "50%",
@@ -32,22 +33,19 @@ const style = {
   alignItems: "space-between"
 };
 
+// tipando a prop do modal
 export type ModalProps = {
   pokemon: PokemonDetailsInterface;
 }
 
+// criando o modal com o state de abertura e fechamento
 export const PokemonDetailsModal: React.FC<ModalProps> = ({ pokemon }) => {
   const [open, setOpen] = useState(false);
-  const [pokeDescription, setPokeDescription] = useState("");
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  // useEffect(() => {
-  //   fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemon.id}`)
-  //     .then((response) => console.log(response))
-  //   ,[];
-  // });
-
+  // retornando o modal com seu conteúdo, de acordo com a documentação do Material UI
   return (
     <div>
       <Button onClick={handleOpen}>

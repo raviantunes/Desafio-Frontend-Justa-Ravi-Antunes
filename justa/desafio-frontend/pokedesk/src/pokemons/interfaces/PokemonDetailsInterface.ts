@@ -1,3 +1,5 @@
+/* declarando todos os tipos necessários para 
+lidar com as informações trazidas da API*/
 export interface PokemonDetailsInterface {
     abilities: Ability[];
     base_experience: number;

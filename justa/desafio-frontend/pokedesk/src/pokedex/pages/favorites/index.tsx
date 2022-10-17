@@ -5,13 +5,12 @@ import { FavoritesContext } from "../../contexts/FavoritesContext";
 import PokedexCard from "../../components/pokedexCard";
 import { useNavigate } from "react-router-dom";
 
-
+/* criando a página de favoritos, utilizando o 
+contexto de favoritos para a renderização dos cards*/
 const Favorites: React.FC = () => {
   const { favorites } = useContext(FavoritesContext);
 
   const navigate = useNavigate();
-
-
 
   return (
     <>
@@ -30,7 +29,7 @@ const Favorites: React.FC = () => {
         {favorites.length === 0 ? 
           <div>
             <Box sx={{display: "flex", justifyContent: "center", paddingTop: "8vh", bgcolor: "#FFF933", paddingBottom: "10vh", height: "100vh"}}>
-              <Typography variant="h5">
+              <Typography variant="h5" sx={{color: "#0069E0"}}>
                 You still have no favorite Pokémons! :(
               </Typography>
 

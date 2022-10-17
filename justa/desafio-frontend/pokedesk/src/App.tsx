@@ -3,7 +3,7 @@ import Pokedex from "./pokedex/pages/pokedexPage";
 import Favorites from "./pokedex/pages/favorites";
 import { FavoritesProvider } from "./pokedex/contexts/FavoritesContext";
 
-// inicializando o app com todas as rotas e contexto de favoritos
+// inicializando o app com todas as rotas inseridas no contexto de favoritos
 function App() {
   return (
     <FavoritesProvider>
