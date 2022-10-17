@@ -19,54 +19,54 @@ export interface PokemonDetailsInterface {
     weight: number;
   }
   
-  export interface Ability {
+export interface Ability {
     ability: Species;
     is_hidden: boolean;
     slot: number;
   }
   
-  export interface Species {
+export interface Species {
     name: string;
     url: string;
   }
   
-  export interface GameIndex {
+export interface GameIndex {
     game_index: number;
     version: Species;
   }
   
-  export interface HeldItem {
+export interface HeldItem {
     item: Species;
     version_details: VersionDetail[];
   }
   
-  export interface VersionDetail {
+export interface VersionDetail {
     rarity: number;
     version: Species;
   }
   
-  export interface Move {
+export interface Move {
     move: Species;
     version_group_details: VersionGroupDetail[];
   }
   
-  export interface VersionGroupDetail {
+export interface VersionGroupDetail {
     level_learned_at: number;
     move_learn_method: Species;
     version_group: Species;
   }
   
-  export interface GenerationV {
+export interface GenerationV {
     "black-white": Sprites;
   }
   
-  export interface GenerationIv {
+export interface GenerationIv {
     "diamond-pearl": Sprites;
     "heartgold-soulsilver": Sprites;
     platinum: Sprites;
   }
   
-  export interface Versions {
+export interface Versions {
     "generation-i": GenerationI;
     "generation-ii": GenerationIi;
     "generation-iii": GenerationIii;
@@ -77,7 +77,7 @@ export interface PokemonDetailsInterface {
     "generation-viii": GenerationViii;
   }
   
-  export interface Sprites {
+export interface Sprites {
     back_default: string;
     back_female: null;
     back_shiny: string;
@@ -91,12 +91,12 @@ export interface PokemonDetailsInterface {
     animated?: Sprites;
   }
   
-  export interface GenerationI {
+export interface GenerationI {
     "red-blue": RedBlue;
     yellow: RedBlue;
   }
   
-  export interface RedBlue {
+export interface RedBlue {
     back_default: string;
     back_gray: string;
     back_transparent: string;
@@ -105,13 +105,13 @@ export interface PokemonDetailsInterface {
     front_transparent: string;
   }
   
-  export interface GenerationIi {
+export interface GenerationIi {
     crystal: Crystal;
     gold: Gold;
     silver: Gold;
   }
   
-  export interface Crystal {
+export interface Crystal {
     back_default: string;
     back_shiny: string;
     back_shiny_transparent: string;
@@ -122,7 +122,7 @@ export interface PokemonDetailsInterface {
     front_transparent: string;
   }
   
-  export interface Gold {
+export interface Gold {
     back_default: string;
     back_shiny: string;
     front_default: string;
@@ -130,55 +130,55 @@ export interface PokemonDetailsInterface {
     front_transparent?: string;
   }
   
-  export interface GenerationIii {
+export interface GenerationIii {
     emerald: Emerald;
     "firered-leafgreen": Gold;
     "ruby-sapphire": Gold;
   }
   
-  export interface Emerald {
+export interface Emerald {
     front_default: string;
     front_shiny: string;
   }
   
-  export interface Home {
+export interface Home {
     front_default: string;
     front_female: null;
     front_shiny: string;
     front_shiny_female: null;
   }
   
-  export interface GenerationVii {
+export interface GenerationVii {
     icons: DreamWorld;
     "ultra-sun-ultra-moon": Home;
   }
   
-  export interface DreamWorld {
+export interface DreamWorld {
     front_default: string;
     front_female: null;
   }
   
-  export interface GenerationViii {
+export interface GenerationViii {
     icons: DreamWorld;
   }
   
-  export interface Other {
+export interface Other {
     dream_world: DreamWorld;
     home: Home;
     "official-artwork": OfficialArtwork;
   }
   
-  export interface OfficialArtwork {
+export interface OfficialArtwork {
     front_default: string;
   }
   
-  export interface Stat {
+export interface Stat {
     base_stat: number;
     effort: number;
     stat: Species;
   }
   
-  export interface Type {
+export interface Type {
     slot: number;
     type: Species;
   }
