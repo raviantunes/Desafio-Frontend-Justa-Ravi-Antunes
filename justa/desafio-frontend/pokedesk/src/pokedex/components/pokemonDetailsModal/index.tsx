@@ -13,17 +13,23 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "30vw",
+  width: {
+    xs:"40vw",
+    md: "25vw"
+  },
   bgcolor: "background.paper",
   border: "2px solid #000",
   borderRadius: "16px",
   boxShadow: 24,
   p: 4,
-  height: "60vh",
+  height: "45vh",
   img: {
     width: "100%",
     height: "100%"
-  }
+  },
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "space-between"
 };
 
 export type ModalProps = {
@@ -60,7 +66,7 @@ export const PokemonDetailsModal: React.FC<ModalProps> = ({ pokemon }) => {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Box sx={{  display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between",}}>
+            <Box sx={{  display: "flex", flexDirection: "column", alignItems: "center"}}>
               <Box sx={{marginBottom: "5vh"}}>
                 <Typography variant="h4">
                   {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
@@ -77,9 +83,12 @@ export const PokemonDetailsModal: React.FC<ModalProps> = ({ pokemon }) => {
                 src={pokemon.sprites.versions?.["generation-v"]["black-white"].animated?.front_default}
               />
 
-              <Box>
+              <Box sx={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "3vh"}}>
                 <Typography>
-                  {}
+                  Height: {pokemon.height} feet
+                </Typography>
+                <Typography>
+                  Weight: {pokemon.weight} pounds
                 </Typography>
               </Box>
 
